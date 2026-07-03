@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jason's Apps</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        background:
+          radial-gradient(circle at 12% 10%, rgba(20, 184, 166, 0.35), transparent 26rem),
+          radial-gradient(circle at 88% 18%, rgba(244, 114, 182, 0.28), transparent 25rem),
+          radial-gradient(circle at 48% 92%, rgba(96, 165, 250, 0.22), transparent 28rem),
+          linear-gradient(145deg, #07080d 0%, #111827 52%, #080a10 100%);
+        color: #f4f6fb;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      main {
+        width: min(92vw, 420px);
+        padding: 28px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 24px;
+        background: rgba(10, 13, 20, 0.72);
+        box-shadow: 0 28px 90px rgba(0, 0, 0, 0.42);
+        backdrop-filter: blur(18px);
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: 2.4rem;
+        letter-spacing: 0;
+      }
+
+      p {
+        margin: 0 0 28px;
+        color: #9da6b8;
+      }
+
+      nav {
+        display: grid;
+        gap: 12px;
+      }
+
+      a {
+        --accent: #7dd3fc;
+        --accent-2: #2563eb;
+        --symbol: "•";
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        min-height: 76px;
+        padding: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 18px;
+        background:
+          linear-gradient(135deg, var(--accent), var(--accent-2)),
+          #151922;
+        color: #f4f6fb;
+        font-size: 1.1rem;
+        font-weight: 650;
+        text-decoration: none;
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.22),
+          0 14px 30px rgba(0, 0, 0, 0.28);
+        transition:
+          box-shadow 160ms ease,
+          transform 160ms ease;
+      }
+
+      a::before {
+        content: var(--symbol);
+        width: 44px;
+        height: 44px;
+        display: grid;
+        flex: 0 0 auto;
+        place-items: center;
+        border-radius: 13px;
+        background: rgba(255, 255, 255, 0.18);
+        color: white;
+        font-size: 1.25rem;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+      }
+
+      a::after {
+        content: "→";
+        width: 34px;
+        height: 34px;
+        display: grid;
+        flex: 0 0 auto;
+        place-items: center;
+        border-radius: 999px;
+        background: rgba(0, 0, 0, 0.18);
+        color: white;
+        font-size: 1.1rem;
+      }
+
+      a:hover,
+      a:focus-visible {
+        border-color: rgba(255, 255, 255, 0.32);
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.26),
+          0 20px 44px rgba(0, 0, 0, 0.36);
+        transform: translateY(-3px) scale(1.01);
+        outline: none;
+      }
+
+      .noted {
+        --accent: #f97316;
+        --accent-2: #db2777;
+        --symbol: "N";
+      }
+
+      .wheel {
+        --accent: #10b981;
+        --accent-2: #2563eb;
+        --symbol: "W";
+      }
+
+      .soundboard {
+        --accent: #8b5cf6;
+        --accent-2: #06b6d4;
+        --symbol: "S";
+      }
+
+      @media (max-width: 460px) {
+        main {
+          padding: 22px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Jason's Apps</h1>
+      <p>Quick links to my web apps.</p>
+
+      <nav aria-label="Apps">
+        <a class="noted" href="https://jasonanorris.github.io/noted/">Noted</a>
+        <a class="wheel" href="https://jasonanorris.github.io/wheel/">Wheel</a>
+        <a class="soundboard" href="https://jasonanorris.github.io/soundboard/">Soundboard</a>
+      </nav>
+    </main>
+  </body>
+</html>
